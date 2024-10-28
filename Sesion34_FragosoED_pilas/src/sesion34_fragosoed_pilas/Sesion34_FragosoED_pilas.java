@@ -18,6 +18,9 @@ public class Sesion34_FragosoED_pilas {
           pilaFragoso.push(10);
           pilaFragoso.push(160);
           JOptionPane.showMessageDialog(null, "Datos en pila ordeanada es \n"+pilaFragoso);
+    
+     JOptionPane.showMessageDialog(null, "Autor: Carlos Fragoso  \n"+pilaFragoso);
+    
     }
     
 }
