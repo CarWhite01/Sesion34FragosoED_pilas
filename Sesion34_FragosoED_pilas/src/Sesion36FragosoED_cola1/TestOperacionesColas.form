@@ -63,7 +63,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnElementosAgregarEDcola">
       <Properties>
-        <Property name="text" type="java.lang.String" value="A&#xf1;adir elementos en ED Cola"/>
+        <Property name="text" type="java.lang.String" value="Realizar cola elementos en ED"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnElementosAgregarEDcolaActionPerformed"/>
@@ -73,6 +73,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Imprimir elementos en ED Cola"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnImpimirEDColaActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

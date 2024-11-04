@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 
 
 public class TestOperacionesColas extends javax.swing.JFrame {
-    OperacionesColas cola = new OperacionesColas(10);
+    OperacionesColas cola = new OperacionesColas(5);
 
     public TestOperacionesColas() {
         initComponents();
@@ -24,7 +24,7 @@ public class TestOperacionesColas extends javax.swing.JFrame {
 
         lblTitulo.setText("Operaciones ED colas Fragoso");
 
-        btnElementosAgregarEDcola.setText("Añadir elementos en ED Cola");
+        btnElementosAgregarEDcola.setText("Realizar cola elementos en ED");
         btnElementosAgregarEDcola.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnElementosAgregarEDcolaActionPerformed(evt);
@@ -32,6 +32,11 @@ public class TestOperacionesColas extends javax.swing.JFrame {
         });
 
         btnImpimirEDCola.setText("Imprimir elementos en ED Cola");
+        btnImpimirEDCola.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnImpimirEDColaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -65,14 +70,20 @@ public class TestOperacionesColas extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnElementosAgregarEDcolaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnElementosAgregarEDcolaActionPerformed
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i <= 5; i++) {
             try {
                 cola.insertar(i);
+                JOptionPane.showMessageDialog(null, "Llenando valores \n"+(i+1));
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(null, "Error Al insertar los datos verificados\n " +e);
             }
         }
     }//GEN-LAST:event_btnElementosAgregarEDcolaActionPerformed
+
+    private void btnImpimirEDColaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImpimirEDColaActionPerformed
+          cola.imprimir();
+      JOptionPane.showMessageDialog(null, "Cola llena de valores \n Espacio Maximo es: \n "+cola.tamMax());
+    }//GEN-LAST:event_btnImpimirEDColaActionPerformed
 
     /**
      * @param args the command line arguments
