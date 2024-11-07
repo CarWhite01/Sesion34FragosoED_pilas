@@ -31,9 +31,9 @@
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="104" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="btnImpimirEDCola" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnElementosAgregarEDcola" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="btnImpimirEDCola" max="32767" attributes="0"/>
+                          <Component id="btnElementosAgregarEDcola" alignment="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
