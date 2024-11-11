@@ -23,6 +23,7 @@ public class TestCarrito extends javax.swing.JFrame {
         btnAlta = new javax.swing.JButton();
         btnConsulta = new javax.swing.JButton();
         btnEliminar = new javax.swing.JButton();
+        btnRecomendar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -52,18 +53,26 @@ public class TestCarrito extends javax.swing.JFrame {
             }
         });
 
+        btnRecomendar.setText("Recomendar Producto");
+        btnRecomendar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRecomendarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout panPilaLayout = new javax.swing.GroupLayout(panPila);
         panPila.setLayout(panPilaLayout);
         panPilaLayout.setHorizontalGroup(
             panPilaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panPilaLayout.createSequentialGroup()
                 .addGap(84, 84, 84)
-                .addGroup(panPilaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnEliminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(panPilaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnRecomendar)
                     .addGroup(panPilaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(btnEliminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnConsulta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(114, Short.MAX_VALUE))
+                .addContainerGap(150, Short.MAX_VALUE))
         );
         panPilaLayout.setVerticalGroup(
             panPilaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -74,7 +83,9 @@ public class TestCarrito extends javax.swing.JFrame {
                 .addComponent(btnConsulta)
                 .addGap(18, 18, 18)
                 .addComponent(btnEliminar)
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(btnRecomendar)
+                .addContainerGap(40, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -89,7 +100,7 @@ public class TestCarrito extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(58, 58, 58)
                         .addComponent(panPila, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -98,7 +109,7 @@ public class TestCarrito extends javax.swing.JFrame {
                 .addComponent(lblTitulo)
                 .addGap(45, 45, 45)
                 .addComponent(panPila, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(63, Short.MAX_VALUE))
+                .addContainerGap(53, Short.MAX_VALUE))
         );
 
         pack();
@@ -118,6 +129,14 @@ Carrito carritoCompras = new Carrito();
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
 carritoCompras.eliminarUltimoproducto();
     }//GEN-LAST:event_btnEliminarActionPerformed
+
+    private void btnRecomendarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRecomendarActionPerformed
+   
+        carritoCompras.recomendarProducto();
+        
+        
+        
+    }//GEN-LAST:event_btnRecomendarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -158,6 +177,7 @@ carritoCompras.eliminarUltimoproducto();
     private javax.swing.JButton btnAlta;
     private javax.swing.JButton btnConsulta;
     private javax.swing.JButton btnEliminar;
+    private javax.swing.JButton btnRecomendar;
     private javax.swing.JLabel lblTitulo;
     private javax.swing.JPanel panPila;
     // End of variables declaration//GEN-END:variables
